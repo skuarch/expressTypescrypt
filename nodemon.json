@@ -1,0 +1,13 @@
+{
+  "verbose": true,
+  "watch": ["src","**/*.ts"],
+  "ext": "ts",
+  "ignore": ["src/public",".git", "node_modules/**/node_modules", "node_modules/" , "src/**/*.spec.ts"],
+  "exec": "npm run start",
+  "execMap": {
+    "ts": "tsc"
+  },
+  "env": {
+    "NODE_ENV": "development"
+  }
+}

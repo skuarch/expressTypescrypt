@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "charset": "utf-8",
+        "strict": true,
+        "baseUrl": "./",
+        "outDir": "dist",
+        "removeComments": true,
+        "experimentalDecorators": true,
+        "target": "es6",
+        "emitDecoratorMetadata": true,
+        "moduleResolution": "node",
+        "importHelpers": true,
+        "allowJs": true,
+        "inlineSourceMap": true,
+        "rootDir": "./src",
+        "types": [
+            "node"
+        ],
+        "typeRoots": [
+            "node_modules/@types"
+        ]
+    },
+    "include": [
+        "./src/**/*.ts"
+    ],
+    "exclude": [
+        "./src/public",
+        "node_modules"
+    ]
+}
