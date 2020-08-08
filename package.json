@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/http-server/start-server.js",
   "scripts": {
-    "build": "tsc",
+    "build": "rm -rf dist/* && tsc",
     "prestart": "npm run build && npm run tslint ./src/*",
     "start": "node .",
     "dev": "NODE_ENV=development && npm run nodemon",
@@ -15,8 +15,10 @@
   "license": "ISC",
   "dependencies": {
     "@types/express": "^4.17.7",
+    "@types/log4js": "^2.3.5",
     "@types/node": "^14.0.27",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "log4js": "^6.3.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4",
