@@ -22,6 +22,7 @@ export class HttpServer {
     this.serverConfig.configParser();
     this.serverConfig.configLog();
     this.serverConfig.configRoutes();
+    this.serverConfig.configErrors();
   }
 
   startServer(): void {

@@ -1,21 +1,28 @@
 import { Request, Response, Router } from 'express';
-import { ControllerBase } from './controller-base';
+import { BaseRoute } from './base-route';
 
-export class Index implements ControllerBase {
+export class Index implements BaseRoute {
 
   private router: Router;
 
   constructor() {
     this.router = Router();
+    this.initRoutes();
+  }
+
+  initRoutes(): void {
+    this.getIndex();
   }
 
   get getRouter(): Router {
-    this.router.get('/', (req: Request, res: Response) => {
-      const str = 'arroz';
-      res.send(str.split('').reverse().join(''));
-    });
     return this.router;
   }
 
-}
+  private getIndex(): void {
+    this.router.get('/', (req: Request, res: Response) => {
+      const str = 'hello';
+      res.send(str.split('').reverse().join(''));
+    });
+  }
 
+}

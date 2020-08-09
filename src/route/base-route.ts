@@ -1,5 +1,6 @@
 import { Router } from 'express';
 
-export interface ControllerBase {
+export interface BaseRoute {
   getRouter: Router;
+  initRoutes(): void;
 }

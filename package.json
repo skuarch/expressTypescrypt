@@ -5,11 +5,11 @@
   "main": "dist/http-server/start-server.js",
   "scripts": {
     "build": "rm -rf dist/* && tsc",
-    "prestart": "npm run build && npm run tslint ./src/*",
+    "prestart": "npm run build && npm run tslint ",
     "start": "node .",
     "dev": "NODE_ENV=development && npm run nodemon",
     "nodemon": "nodemon",
-    "tslint": "tslint"
+    "tslint": "tslint --config ./tslint.json --project ./tsconfig.json --force --format stylish"
   },
   "author": "",
   "license": "ISC",
