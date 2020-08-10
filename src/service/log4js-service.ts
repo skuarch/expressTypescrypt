@@ -28,8 +28,7 @@ export class Log4jsService {
   }
 
   appError(error: AppError): void {
-    const e = `code: ${error.code}, message: ${error.message}`;
-    this.stringError(e);
+    this.stringError(error.toString());
   }
 
   stringError(message: string): void {

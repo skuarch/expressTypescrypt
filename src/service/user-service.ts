@@ -13,7 +13,6 @@ export class UserService {
   }
 
   createUser(user: User): User {
-    throw new AppError('error inside of create user', 500);
     user.id = 1;
     return user;
   }
